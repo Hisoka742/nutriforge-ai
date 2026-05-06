@@ -21,43 +21,6 @@
 
 ---
 
-## Screenshots
-
-<table>
-  <tr>
-    <td align="center"><b>Login</b></td>
-    <td align="center"><b>Dashboard + ML Predictions</b></td>
-  </tr>
-  <tr>
-    <td><img src="screenshot_login.png" width="100%"/></td>
-    <td><img src="screenshot_dashboard.png" width="100%"/></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Nutrition</b></td>
-    <td align="center"><b>Workout Plan</b></td>
-  </tr>
-  <tr>
-    <td><img src="screenshot_nutrition.png" width="100%"/></td>
-    <td><img src="screenshot_workout.png" width="100%"/></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Supplements</b></td>
-    <td align="center"><b>AI Chat</b></td>
-  </tr>
-  <tr>
-    <td><img src="screenshot_supplements.png" width="100%"/></td>
-    <td><img src="screenshot_chat.png" width="100%"/></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Progress Tracker</b></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><img src="screenshot_progress.png" width="100%"/></td>
-    <td></td>
-  </tr>
-</table>
-
 ---
 
 ## What is NutriForge AI?
@@ -218,3 +181,4 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 ---
 
 <p align="center">Built as a graduation project — NutriForge AI 2026</p>
+
