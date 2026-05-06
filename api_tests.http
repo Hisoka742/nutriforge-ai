@@ -1,0 +1,148 @@
+### NutriForge API — test all endpoints with VS Code REST Client
+### Install extension: humao.rest-client
+### Click "Send Request" above each block to test
+
+@base = http://localhost:8000/api
+@token = PASTE_YOUR_TOKEN_HERE
+
+### 1. Health check
+GET http://localhost:8000/health
+
+###
+
+### 2. Register a new user
+POST {{base}}/users/register
+Content-Type: application/json
+
+{
+  "email": "jawad@example.com",
+  "password": "securepass123",
+  "name": "Jawad"
+}
+
+###
+
+### 3. Login — copy the token from response into @token above
+POST {{base}}/users/login
+Content-Type: application/json
+
+{
+  "email": "jawad@example.com",
+  "password": "securepass123"
+}
+
+###
+
+### 4. Save fitness profile
+POST {{base}}/users/profile
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "gender": "male",
+  "age": 25,
+  "weight_kg": 80,
+  "height_cm": 180,
+  "activity_level": "moderate",
+  "goal": "muscle_gain",
+  "diet_style": "none",
+  "allergies": []
+}
+
+###
+
+### 5. Get macro targets
+POST {{base}}/nutrition/macros
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "gender": "male",
+  "age": 25,
+  "weight_kg": 80,
+  "height_cm": 180,
+  "activity_level": "moderate",
+  "goal": "muscle_gain",
+  "diet_style": "none",
+  "allergies": []
+}
+
+###
+
+### 6. Get BMI
+GET {{base}}/nutrition/bmi?weight_kg=80&height_cm=180
+Authorization: Bearer {{token}}
+
+###
+
+### 7. Search food (USDA)
+POST {{base}}/nutrition/food/search
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "query": "chicken breast",
+  "max_results": 5
+}
+
+###
+
+### 8. Get workout plan
+POST {{base}}/workout/plan
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "profile": {
+    "gender": "male",
+    "age": 25,
+    "weight_kg": 80,
+    "height_cm": 180,
+    "activity_level": "moderate",
+    "goal": "muscle_gain",
+    "diet_style": "none",
+    "allergies": []
+  },
+  "request": {
+    "sessions_per_week": 4,
+    "equipment": "full_gym"
+  }
+}
+
+###
+
+### 9. Get supplement plan
+POST {{base}}/supplements/plan
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "gender": "male",
+  "age": 25,
+  "weight_kg": 80,
+  "height_cm": 180,
+  "activity_level": "moderate",
+  "goal": "muscle_gain",
+  "diet_style": "none",
+  "allergies": []
+}
+
+###
+
+### 10. Log progress
+POST {{base}}/progress/log
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "date": "2026-04-22",
+  "weight_kg": 80.5,
+  "body_fat_pct": 18.2,
+  "notes": "Feeling strong this week"
+}
+
+###
+
+### 11. Get progress summary
+GET {{base}}/progress/summary
+Authorization: Bearer {{token}}

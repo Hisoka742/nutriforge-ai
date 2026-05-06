@@ -1,0 +1,38 @@
+{
+  "project": "NutriForge AI",
+  "datasets_used": [
+    "Gym Members Exercise Dataset - kaggle.com/datasets/valakhorasani",
+    "Obesity Prediction Dataset   - kaggle.com/datasets/mrsimple07",
+    "BMI Dataset                  - kaggle.com/datasets/yasserh"
+  ],
+  "models": {
+    "calorie_predictor": "calorie_predictor.pkl",
+    "macro_recommender": "macro_recommender.pkl",
+    "health_risk_classifier": "health_risk_classifier.pkl",
+    "workout_intensity_recommender": "workout_intensity_recommender.pkl"
+  },
+  "feature_lists": {
+    "calorie": "calorie_features.pkl",
+    "macro": "macro_features.pkl",
+    "obesity": "obesity_features.pkl",
+    "workout": "workout_features.pkl"
+  },
+  "label_maps": {
+    "health_risk": {
+      "0": "Low",
+      "1": "Medium",
+      "2": "High"
+    },
+    "workout_intensity": {
+      "0": "Light",
+      "1": "Moderate",
+      "2": "Active",
+      "3": "Intense"
+    },
+    "goal": {
+      "0": "Lose Weight",
+      "1": "Maintain",
+      "2": "Gain Muscle"
+    }
+  }
+}
